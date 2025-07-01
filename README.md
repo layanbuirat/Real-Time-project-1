@@ -4,7 +4,7 @@
 
 # 🧠 Tug of War Simulation 💪🏽🚩
 
-![Tug of War Demo](media/tug_of_war.gif)
+![Tug of War Demo](tug_of_war.gif)
 
 Welcome to my Tug of War game simulation! 🎉 This C project brings a classic game to life with multi-processing, inter-process communication, and a visual twist using OpenGL! 🚀 The project uses multiple processes to simulate players and a referee, with pipes and signals handling communication and synchronization. OpenGL brings the action to life visually, making it a fun and interactive experience!
 
