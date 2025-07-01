@@ -1,27 +1,65 @@
-# Bungee Jumping Simulation
 
-This project is a multi-processing simulation of a bungee jumping game using C. The simulation involves three teams of players performing bungee jumps, coordinated by a referee process. The program uses signals and pipes for inter-process communication and visualizes the game using OpenGL.
 
-## Project Structure
+---
 
-The project has the following structure:
+# 🧠 Tug of War Simulation 💪🏽🚩
 
+![Tug of War Demo](media/tug_of_war.gif)
+
+Welcome to my Tug of War game simulation! 🎉 This C project brings a classic game to life with multi-processing, inter-process communication, and a visual twist using OpenGL! 🚀 The project uses multiple processes to simulate players and a referee, with pipes and signals handling communication and synchronization. OpenGL brings the action to life visually, making it a fun and interactive experience!
+
+## 📂 Project Structure
+
+The project is organized for clarity and modularity:
 ```plaintext
-bungee_simulation/
-├── bin/                        # Contains the compiled executable
-├── config.txt                  # Configuration file with game settings
-├── include/                    # Header files for each module
-│   ├── assistant_referee.h     # Assistant Referee module header
-│   ├── player.h                # Player module header
-│   └── config.h                # Config module header for loading settings
-├── obj/                        # Compiled object files for each source file
-├── src/                        # Source code files
-│   ├── main_referee.c          # Main file that starts the game & Referee module implementation
-│   ├── assistant_referee.c     # Team module implementation
-│   ├── player.c                # Player module implementation
-│   └── config.c                # Config module implementation to load settings
-├── Makefile                    # Makefile for building the project
-└── README.md                   # This readme file
+`Tug_of_war_simulation/`
+├── `bin/` 🎯 Compiled executable lives here
+├── `include/` 📁 Header files
+│   ├── `gui.h` 🎨 OpenGL GUI interface
+│   └── `config.h` ⚙️ Loads game configuration
+├── `obj/` 🧱 Compiled object files
+├── `src/` 💻 Source code
+│   ├── `main.c` 🧑‍⚖️ Starts the game & handles referee logic
+│   ├── `player.c` 🏋️ Player logic and actions
+│   └── `config.c` 🛠️ Configuration file loader
+├── `Makefile` 📦 Automates building & running
+└── `README.md` 📘 This file!
+```
+## 🔗 Inter-Process Communication (IPC)
+
+We use a combination of pipes and signals to keep the game synchronized and responsive.
+📬 **Pipes** are used to transfer scores and status between the referee and the players.
+⏱️ **Signals** are used to coordinate when players should act and when the referee should evaluate the game state.
+
+## 🛠️ Build & Run Instructions
+
+To build the project, run:
+
+```bash
+make  
 ```
 
-## 
+To run the simulation:
+
+```bash
+make run  
+```
+
+To clean up object files and the executable:
+
+```bash
+make clean  
+```
+
+## 💡 Features
+
+🎨 Real-time GUI using OpenGL for immersive visualization
+🧑‍🤝‍🧑 Two teams competing simultaneously in a tug-of-war match
+🔁 Synchronized gameplay rounds and live game state feedback
+⚙️ Configurable game settings loaded from an external file for easy tweaking
+
+## ✨ Have Fun Tugging!
+
+Pull hard, play fair, and may the strongest team win! 💥💪 If you enjoyed the project, feel free to ⭐ star it and fork it on GitHub to make it your own!
+
+---
